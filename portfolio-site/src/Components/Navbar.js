@@ -7,6 +7,8 @@ import {
   Navigation,
   Content
 } from "react-mdl";
+import Main from "./main";
+import {Link} from 'react-router-dom'
 export class Navbar extends Component {
   render() {
     return (
@@ -21,21 +23,25 @@ export class Navbar extends Component {
             }
           >
             <Navigation>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
+              <Link href="">About Me</a>
+              <Link href="">Resume</a>
+              <Link href="">Projects</a>
+              <Link href="">Contact</a>
             </Navigation>
           </Header>
           <Drawer title="Title">
             <Navigation>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
-              <a href="/">Link</a>
+              <Link href=""></a>
+              <Link href=""></a>
+              <Link href=""></a>
+              <Link href=""></a>
             </Navigation>
           </Drawer>
-          <Content />
+          <Content>
+            <div className="page-content">
+              <Main />
+            </div>
+          </Content>
         </Layout>
       </div>
     );
