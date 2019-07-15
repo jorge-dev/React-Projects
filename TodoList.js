@@ -1,14 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export class TodoList extends Component {
-    constructor
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      todos: []
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Todo List</h1>
+      </div>
+    );
+  }
 }
 
-export default TodoList
+export default TodoList;
