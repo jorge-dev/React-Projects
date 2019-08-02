@@ -1,11 +1,12 @@
 import React from "react";
-import Deck from "./Deck";
+
 import "./App.css";
+import JokeList from "./JokeList";
 
 function App() {
   return (
     <div className="App">
-      <Deck />
+      <JokeList />
     </div>
   );
 }
