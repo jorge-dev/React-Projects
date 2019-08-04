@@ -11,9 +11,25 @@ export default class JokeList extends Component {
     super(props);
 
     this.state = {
-      jokes: []
+      jokes: JSON.parse(window.localStorage.getItem("jokes") || "[]")
     };
     this.handleVote = this.handleVote.bind(this);
+  }
+
+  async componentDidMount() {
+    if (this.state.jokes.length === 0) this.getJokes();
+  }
+  async getJokes() {
+    let jokes = [];
+    while (jokes.length < this.props.numJokesToGet) {
+      let response = await axios.get("https://icanhazdadjoke.com/", {
+        headers: { Accept: "application/json" }
+      });
+      jokes.push({ id: uuid(), text: response.data.joke, votes: 0 });
+    }
+
+    this.setState({ jokes: jokes });
+    window.localStorage.setItem("jokes", JSON.stringify(jokes));
   }
 
   handleVote(id, change) {
@@ -24,17 +40,6 @@ export default class JokeList extends Component {
     }));
   }
 
-  async componentDidMount() {
-    let jokes = [];
-    while (jokes.length < this.props.numJokesToGet) {
-      let response = await axios.get("https://icanhazdadjoke.com/", {
-        headers: { Accept: "application/json" }
-      });
-      jokes.push({ id: uuid(), text: response.data.joke, votes: 0 });
-    }
-
-    this.setState({ jokes: jokes });
-  }
   render() {
     return (
       <div className="JokeList">
