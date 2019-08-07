@@ -91,6 +91,7 @@ export default class JokeList extends Component {
           <button className="JokeList-loadMore" onClick={this.handleClick}>
             Fetch Jokes
           </button>
+          <h3>Number of jokes: {this.state.jokes.length}</h3>
         </div>
 
         <div className="JokeList-jokes">
