@@ -5,46 +5,43 @@ export default {
     justifyContent: "flex-start",
     height: "6vh"
   },
-
   logo: {
-    marginRight: 15,
+    marginRight: "15px",
     padding: "0 13px",
-    fontSize: 22,
+    fontSize: "22px",
     backgroundColor: "#eceff1",
     fontFamily: "Roboto",
     height: "100%",
     display: "flex",
     alignItems: "center",
-    "&  a ": {
+    "& a": {
       textDecoration: "none",
       color: "black"
     }
   },
-
   slider: {
-    width: 340,
+    width: "340px",
     margin: "0 10px",
     display: "inline-block",
-    "& rc-slider-track": {
+    "& .rc-slider-track": {
       backgroundColor: "transparent"
     },
-    "& rc-slider-rail": {
-      height: "10px"
+    "& .rc-slider-rail": {
+      height: "8px"
     },
-    "       & .rc-slider-handle, .rc-slider-handle:focus, .rc-slider-handle:hover, .rc-slider-handle:active": {
+    "& .rc-slider-handle, .rc-slider-handle:active, .rc-slider-handle:focus,.rc-slider-handle:hover": {
       backgroundColor: "green",
-      border: "2px solid green",
       outline: "none",
+      border: "2px solid green",
       boxShadow: "none",
-      width: 13,
-      height: 13,
+      width: "13px",
+      height: "13px",
       marginLeft: "-7px",
       marginTop: "-3px"
     }
   },
-
   selectContainer: {
     marginLeft: "auto",
-    marginRight: "1.5rem"
+    marginRight: "1rem"
   }
 };

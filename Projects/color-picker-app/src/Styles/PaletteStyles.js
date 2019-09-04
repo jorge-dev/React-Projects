@@ -1,7 +1,6 @@
 export default {
   Palette: {
     height: "100vh",
-    overflowY: "hidden",
     display: "flex",
     flexDirection: "column"
   },
@@ -16,7 +15,8 @@ export default {
     position: "relative",
     cursor: "pointer",
     marginBottom: "-3.5px",
-    backgroundColor: " black",
+    opacity: 1,
+    backgroundColor: "black",
     "& a": {
       color: "white",
       width: "100px",

@@ -27,12 +27,11 @@ export default {
     fontSize: "1rem",
     position: "relative"
   },
-
   emoji: {
-    margindLeft: ".5rem",
-    fontSize: "1rem"
+    marginLeft: "0.5rem",
+    fontSize: "1.5rem"
   },
-  miniBoxes: {
+  miniColor: {
     height: "25%",
     width: "20%",
     display: "inline-block",
